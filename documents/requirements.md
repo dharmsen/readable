@@ -18,7 +18,6 @@ I want to write a skill that translates Claude Code prose output (e.g., from pla
 - Define terms in bold at first use, in one sentence
 - Compress the core idea into a table or progression.
 - Explain every mechanism in three layers: intuition, formal, operational.
-- Use analogies that map onto the structure, not just the flavor.
 - Make figure captions carry the takeaway.
 - Keep tangents out of the main text.
 - Calibrate claims and mark speculation.
@@ -29,4 +28,3 @@ I want to write a skill that translates Claude Code prose output (e.g., from pla
 - Apply preference only when the available tools, data, and rendering support make a useful, accurate figure practical.
 - Build intuition with a concrete example and a visual (like in textbooks).
 - Favor a few informative figures over decoration or a fixed figure quota.
-- 
