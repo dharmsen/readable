@@ -30,8 +30,9 @@ Every output starts the same way, regardless of type:
 
 1. **Frame** (one to three sentences): the larger setting. What system, what goal, who cares.
 2. **Problem** (one to three sentences): the specific gap or question inside that frame.
-3. **Scope** (one to three lines): what this document covers and what it leaves out. Bullets are fine here.
-4. **Core idea** (a table or a short progression): the whole document compressed. See section 7.
+3. **Question** (one line): the question this document answers, in the reader's words. Example: "Does the proxy hold across language families?" The rest of the document is the answer; the core idea previews it.
+4. **Scope** (one to three lines): what this document covers and what it leaves out. Bullets are fine here.
+5. **Core idea** (a table or a short progression): the whole document compressed. See section 7.
 
 Every output ends the same way:
 
@@ -114,6 +115,8 @@ Plans rarely need the formal layer. They do need, for each step, the concrete ar
 ## 6. Three-layer mechanism explanations
 
 A mechanism is anything with a "why" behind it: an algorithm, a protocol, a design choice, an invariant. Explain each in three layers, in this order, because a reader who has the intuition can skim the formal part and a reader who has both can jump to the operational part.
+
+Use the full three layers only for the mechanisms the document's conclusion depends on — usually one or two per document. Most sections need one layer. If the source asserts a mechanism without explaining it, keep the assertion and move on. Over-explaining buries the storyline the same way dense sentences do.
 
 **Intuition.** One or two sentences of the picture, then a concrete example small enough to trace by hand. Textbooks do this: "Suppose three clients each send one request per second..." If a figure is worth having, it goes here.
 

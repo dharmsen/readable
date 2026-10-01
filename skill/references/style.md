@@ -14,10 +14,11 @@ Simplified Technical English (ASD-STE100) was written so that maintenance manual
 ## 1. Sentence rules
 
 - **One instruction or one idea per sentence.** If a sentence has two verbs joined by "and", check whether it is two ideas.
-- **Length**: under 20 words for descriptive text. Procedure steps can be shorter. Twenty-five is the hard ceiling.
+- **Length**: 12 to 25 words, one new idea per sentence. Twenty-five is the hard ceiling. Short is not the goal; even is. If cutting words would stack two facts into one clause, keep the words and split the facts instead. More than two numbers in one sentence is a stack; give the third number its own sentence.
 - **Active voice.** The actor comes first. Passive is allowed when the actor is unknown or irrelevant: "The file is read once."
 - **Present tense** for how things work. Past tense for what happened. Future only for what will happen at a stated time.
-- **Keep subject and verb close.** Do not put a clause between them.
+- **Keep subject and verb close.** Do not put a clause between them. If a long clause must interrupt, move it before the sentence or after the main clause instead.
+- **Old before new.** Start a sentence from something the reader already has; put the new material at the end. Each sentence hands the next one its topic. A sentence that opens with three new things forces the reader to hold them all before any of them pay off.
 - **Split on these words**: and, but, which, while, whereas, so that, in order to, semicolon, em-dash. Each is usually a sentence boundary in disguise.
 - **Put the condition first** in a conditional: "If the queue is full, the producer blocks." The reader learns when the rule applies before learning the rule.
 - **Negatives**: prefer one negative per sentence. "Do not skip validation" is fine. "It is not uncommon for validation to not run" is not.
@@ -35,6 +36,7 @@ Simplified Technical English (ASD-STE100) was written so that maintenance manual
 ## 3. Paragraph and section rules
 
 - A paragraph makes one point. First sentence states the point. The rest supports it.
+- The first sentence of a section picks up where the previous section ended, then states what this one answers. Do not open a section cold. This is the storyline the reader follows.
 - Four sentences is the comfortable ceiling. Five is the hard one.
 - Headings state the conclusion or the concrete topic. Compare "Caching" to "Caching cuts p50 by half but not p99".
 - Use lists when items are parallel and independent. Use a numbered list when order matters. Use a table when the reader will compare items across two or more attributes.
@@ -51,6 +53,8 @@ Pattern: **Term** is a [category] that [distinguishing property].
 - **Idempotent** means that running an operation twice gives the same result as running it once.
 
 Define only what the reader may not know. Do not define "function" for a programmer. Do define project-specific names, acronyms, and any term the source uses in a narrower sense than usual.
+
+If a definition pushes its sentence past the length limit, do not fold the definition into a rule. Define the term in its own sentence first, then state the rule in the next sentence.
 
 ## 5. Calibrating claims
 

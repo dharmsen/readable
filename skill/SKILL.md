@@ -20,7 +20,7 @@ Turn dense prose into text a tired reader can follow on the first pass. The read
 
 If the sibling file already exists, overwrite it. It is the skill's own output, not the user's.
 
-Default is **preserve** mode: every fact, decision, number, caveat, and open question in the source survives in the rewrite. Move tangents to an appendix instead of deleting them. In **compress** mode, merge repeated points, drop detail that changes no decision, and drop tangents. Still keep every decision, number, and caveat. After writing, tell the user in chat what you cut, in one short list.
+Default is **preserve** mode: every fact, decision, number, caveat, and open question in the source survives in the rewrite. Move tangents to an appendix instead of deleting them. In **compress** mode, merge repeated points, drop detail that changes no decision, and drop tangents. Still keep every decision, number, and caveat. After writing, tell the user in chat what you cut: one short line per cut.
 
 ## Process
 
@@ -37,10 +37,10 @@ Work in this order. Each step feeds the next, and skipping the inventory is how 
 
 These follow ASD-STE100 Simplified Technical English in spirit: the writing rules, not the restricted dictionary. Full detail and before/after pairs are in `references/style.md`. The core:
 
-- **One idea per sentence.** Aim for under 20 words. Split at "and", "which", "while", and semicolons.
+- **One new idea per sentence.** Split at "and", "which", "while", and semicolons. Short is not the goal; even is. A 25-word sentence that flows beats a 14-word sentence carrying three facts. Keep at most one new concept and two numbers per sentence.
 - **Active voice, present tense** unless the meaning needs otherwise. "The scheduler drops the job" beats "the job is dropped".
 - **One name per thing.** Pick a term at first use and reuse it. Synonyms read as new concepts.
-- **Define terms at first use, in bold, in one sentence.** Example: **Backpressure** is the signal a consumer sends when it cannot keep up.
+- **Define terms at first use, in bold, in one sentence — only terms the reader may not know.** Example: **Backpressure** is the signal a consumer sends when it cannot keep up. Do not define vocabulary the audience already shares.
 - **Short paragraphs.** Four sentences is a good ceiling. A paragraph holds one point.
 - **Lists for parallel items, tables for comparisons, prose for argument.** Do not force an argument into bullets.
 - **Concrete before abstract.** Lead a mechanism with a small worked example, then generalize.
@@ -50,13 +50,13 @@ These follow ASD-STE100 Simplified Technical English in spirit: the writing rule
 
 ## Content shape
 
-Every output opens with the frame and narrows to the problem, then states scope in one or two lines. The middle depends on the document type. The end lists open problems. `references/structure.md` gives the section template per type and shows how to explain a mechanism in three layers:
+Every output opens with the frame and narrows to the problem, states the question the document answers in one line, then the scope in one or two lines. The middle depends on the document type. Each section opens by picking up where the previous section left off, so the reader always knows where they are in the storyline. The end lists open problems. `references/structure.md` gives the section template per type and shows how to explain a mechanism in three layers:
 
 1. **Intuition**: the one-sentence picture and a concrete example.
 2. **Formal**: the precise statement, rule, or equation.
 3. **Operational**: what to do, run, or check.
 
-Not every section needs all three. A plan step usually needs only the operational layer. An explanation of why an algorithm works needs all three.
+Use all three layers sparingly, and only for the one or two mechanisms the document's conclusion depends on. A plan step usually needs only the operational layer. If the source asserts a mechanism without explaining it, keep the assertion. Do not add derivations or textbook background the source never gave.
 
 ## Figures
 
@@ -69,7 +69,7 @@ Two tools, chosen by what the figure shows:
 
 Every figure gets a caption that states the takeaway, not the contents. "Figure 2: p99 latency doubles once queue depth passes 40" is a caption. "Figure 2: latency vs queue depth" is a label. Details, Mermaid conventions, and the plotting workflow are in `references/figures.md`.
 
-Skip a figure when the data is made up, when the rendering target is unknown, or when the figure would restate a table. Three good figures beat eight decorative ones.
+Skip a figure when the data is made up, when the rendering target is unknown, or when the figure would restate a table. If the same numbers appear in a table in the output, keep one of the two: the table when it has roughly six rows or fewer, the figure when it shows a shape or overlay the table cannot. Never deliver both for the same data. Three good figures beat eight decorative ones.
 
 ## Self-check before delivering
 
@@ -77,7 +77,9 @@ Read the draft as the user would, then confirm:
 
 - [ ] Every inventory item appears (preserve mode) or was cut on purpose and reported (compress mode).
 - [ ] Code, commands, paths, and numbers are verbatim from the source.
-- [ ] No sentence over about 25 words. No paragraph over about five sentences.
+- [ ] No sentence over about 25 words. No paragraph over about five sentences. This includes sentences carrying a bold definition: define the term in its own sentence instead.
+- [ ] No sentence carries more than one new concept or more than two numbers.
+- [ ] The opening states, in one line, the question the document answers. Each section's first sentence links to the previous section.
 - [ ] Every term of art is bold-defined at first use, and only once.
 - [ ] Every heading states a conclusion or a concrete topic.
 - [ ] Every figure has a takeaway caption and is referenced in the text.

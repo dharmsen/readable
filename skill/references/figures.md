@@ -18,6 +18,8 @@ Ask three questions. Draw only if all three are yes.
 2. **Is the data real?** Numbers must come from the source. Structure must be what the source describes. Never invent a curve to illustrate a point. If the source says "latency grows with queue depth" but gives no numbers, do not plot it. Say it in words, or draw a Mermaid diagram of the mechanism instead.
 3. **Will it render where the reader is?** Mermaid renders in GitHub, GitLab, VS Code preview, Obsidian, and most markdown tools. PNG renders anywhere the file link resolves. Nothing renders in the terminal, so in last-response mode a Mermaid block is a code block the reader must paste somewhere. In last-response mode, prefer a table or a short progression, and only use Mermaid when the structure really needs it.
 
+When the output already carries the numbers in a table, the figure must show something the table cannot: a shape across many values, an overlay of several series, a knee. A table of roughly six rows or fewer shows its own shape; keep the table and skip the figure. Do not keep both for the same data.
+
 A typical document has zero to three figures. If you are reaching for a fourth, check whether two of them could be one.
 
 ## 2. Mermaid diagrams
